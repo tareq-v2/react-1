@@ -12,6 +12,7 @@
 
      <div class="container-sm">
       <div id="root"></div>
+      <div id="test"></div>
       <div id="root2"></div>
       </div>
 
@@ -142,7 +143,24 @@
                   }
             }
 
+
+
+            class Test extends React.Component {
+                  state = {
+                        text: "Something"
+                  }
+                  render(){
+                        return (
+                              <div>
+                                    <h6>Another React Div From {this.state.text}</h6>      
+                              </div>
+                        )
+                  }
+
+            }
+
       ReactDOM.render(<Tareq/>, document.getElementById("root"));
+      ReactDOM.render(<Test/>, document.getElementById("test"));
       ReactDOM.render(<Form/>, document.getElementById("root2"));
     </script>
 
